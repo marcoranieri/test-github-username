@@ -1,0 +1,9 @@
+<h1>Pages#home</h1>
+
+<%= form_tag create_path do %>
+
+  <%= label_tag :username %>
+  <%= text_field_tag :username, params[:username] %>
+
+  <%= submit_tag "Search", class: "btn btn-large btn-outline-primary" %>
+<% end %>
