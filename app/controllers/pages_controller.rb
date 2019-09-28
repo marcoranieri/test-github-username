@@ -11,9 +11,9 @@ class PagesController < ApplicationController
   end
 
   def show
-    @avatar = params["avatar"]
+    @avatar    = params["avatar"]
     @repos_url = params["repos_url"]
-    @top_lang = from_params_to_hash(params["format"])
+    @top_lang  = from_params_to_hash(params["format"])
   end
 
   private
