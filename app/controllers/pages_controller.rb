@@ -3,22 +3,38 @@ class PagesController < ApplicationController
   end
 
   def create
-    user     = FetchGithubApi.new(params[:username])
-    top_lang = user.fetch_top_n_repos_languages
-    info     = user.fetch_user_avatar_and_repos_url
-
-    redirect_to show_path(top_lang, info)
+    if params[:username].present?
+      redirect_to show_path(params[:username])
+    else
+      redirect_to :root, alert: "Please insert a GitHub Username"
+    end
   end
 
   def show
-    @avatar    = params["avatar"]
-    @repos_url = params["repos_url"]
-    @top_lang  = from_params_to_hash(params["format"])
+    user = fetch_user(params["format"])
+
+    redirect_to_root if !user.repos.present?
+
+    info_hash = user.fetch_username_avatar_url
+    @top_lang = user.fetch_top_n_repos_languages
+
+    set_user(info_hash)
   end
 
-  private
+private
 
-  def from_params_to_hash(string)
-    string.gsub(/[{}:]/,'').split('&').map{|h| h1,h2 = h.split('='); {h1 => h2}}.reduce(:merge)
+  def fetch_user(username)
+    FetchGithubApi.new(username)
   end
+
+  def set_user(info)
+    @avatar   = info["avatar"]
+    @url      = info["url"]
+    @username = info["username"]
+  end
+
+  def redirect_to_root
+    redirect_to :root, alert: "USER NOT FOUND"; return
+  end
+
 end
