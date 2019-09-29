@@ -1,6 +1,6 @@
 <h1>SHOW PAGE</h1>
-
+<%= link_to "< back", :back  %>
 <br><br>
 <p><%= image_tag @avatar %></p>
-<p><%= link_to "REPOS", @repos_url %></p>
+<p><%= link_to "GitHub", @url, target: "_blank" %></p>
 <p><%= @top_lang %></p>
