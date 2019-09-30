@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
   def index
   end
 
@@ -13,7 +14,7 @@ class PagesController < ApplicationController
   def show
     user = fetch_user(params["format"])
 
-    redirect_to_root if !user.repos.present?
+    redirect_to_root unless user.repos.present?
 
     info_hash = user.fetch_username_avatar_url
     @top_lang = user.fetch_top_n_repos_languages

@@ -1,1 +1,115 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
 
+#white-top {
+  width: 100vw;
+  height: 70vh;
+
+  background: #FAFAFA;
+
+  #content {
+    width: 80vw;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    #title {
+
+    }
+
+    #my-form {
+
+      height: 30vh;
+      width: 50vw;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+
+      #username {
+        padding: 2vh 4vw;
+        width: 100%;
+
+        &::-webkit-input-placeholder {
+          color: #2F2F2F;
+          letter-spacing: 2px;
+          text-align: center;
+          opacity: .7;
+        }
+        &::-moz-placeholder { /* Firefox 18- */
+          color: #2F2F2F;
+          letter-spacing: 2px;
+          text-align: center;
+          opacity: .7;
+        }
+        &::-moz-placeholder {  /* Firefox 19+ */
+          color: #2F2F2F;
+          letter-spacing: 2px;
+          text-align: center;
+          opacity: .7;
+        }
+        &::-ms-input-placeholder {
+          color: #2F2F2F;
+          letter-spacing: 2px;
+          text-align: center;
+          opacity: .7;
+        }
+
+        &:focus {
+          border: 2px solid darkgrey !important;
+          outline-color: lightgray !important;
+        }
+
+      } // #username
+
+      .my-pad {
+        padding: 1em 2em;
+      }
+
+    } // #my-form
+
+  } // #content
+
+} // #white-top
+
+
+#dark-bottom {
+  width: 100vw;
+  height: 30vh;
+
+  background: #2F2F2F;
+}
+
+
+#card-wrapper {
+  width: 35vw;
+  height: 30%;
+  min-height: 50px;
+
+  background: #DADADA;
+}
+
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+// MOBILE
+@media (max-width: 768px) {
+
+  #card-wrapper {
+    width: 90%;
+    height: 40%;
+  }
+
+} // @media

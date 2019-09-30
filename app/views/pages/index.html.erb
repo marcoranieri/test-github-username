@@ -1,9 +1,35 @@
-<h1>Pages#home</h1>
+<div class="wrapper">
 
-<%= form_tag create_path do %>
+  <div id="white-top" class="flex-center">
 
-  <%= label_tag :username %>
-  <%= text_field_tag :username, params[:username] %>
+    <div id="content">
 
-  <%= submit_tag "Search", class: "btn btn-large btn-outline-primary" %>
-<% end %>
+      <div id="title" class="text-center">
+        <h3>______ T I T L E ______</h3>
+        <p>s u b t i t l e</p>
+      </div>
+
+      <div id="form-action">
+        <%= form_tag create_path, id: "my-form" do %>
+
+          <%= text_field_tag :username, params[:username],
+            placeholder: "GitHub username" %>
+
+          <%= submit_tag "Search",
+            class: "btn btn-large btn-outline-secondary my-pad" %>
+
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div id="dark-bottom" class="flex-center">
+    <div id="card-wrapper" class="flex-center">
+      <%= render "responsive-card" %>
+    </div>
+  </div>
+
+</div>
