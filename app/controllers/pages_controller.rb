@@ -19,6 +19,11 @@ class PagesController < ApplicationController
     info_hash = user.fetch_username_avatar_url
     @top_lang = user.fetch_top_n_repos_languages
 
+    # Rename "JS" for ShowPage Layout purpose
+    if @top_lang.key? "JavaScript"
+      @top_lang["JS"] = @top_lang.delete("JavaScript")
+    end
+
     set_user(info_hash)
   end
 

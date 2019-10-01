@@ -104,3 +104,30 @@
   }
 
 } // #dark-right
+
+
+// MOBILE
+@media (max-width: 768px) {
+
+  .wrapper {
+    flex-direction: column !important;
+
+    #dark-right {
+      width: 100% !important;
+      height: 30vh !important;
+
+      &> div:nth-child(2),
+      &> div:nth-child(3) { // 2°
+        display: none;
+      }
+    }
+  }
+
+  #root-btn {
+    position: initial !important;
+    margin: 0 !important;
+    bottom: 30vh !important;
+  }
+
+} // @media
+
