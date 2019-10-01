@@ -1,8 +1,7 @@
-<div class="wrapper d-flex" style="position:relative;">
+<div class="wrapper d-flex position-relative">
 
   <div id="white-left">
 
-    <%= link_to "New Search", root_path, id: "root-btn", class: "btn btn-large btn-outline-secondary my-pad"  %>
 
     <h2 id="username" class="text-center">
       <%= @username %>
@@ -14,6 +13,7 @@
       <%= link_to "<i class='fab fa-github'></i>".html_safe, @url, target: "_blank", id: "github-link" %>
     </p>
 
+    <%= link_to "New Search", root_path, id: "root-btn", class: "btn btn-large btn-outline-secondary my-pad"  %>
   </div>
 
   <div id="dark-right">
