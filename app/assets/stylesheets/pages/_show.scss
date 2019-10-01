@@ -1,5 +1,5 @@
 #white-left {
-  background: #FAFAFA;
+  background: $light-gray;
   padding: 5vh 0px;
 
   flex: 1;
@@ -49,13 +49,15 @@
 
   #github-link {
     position: relative;
+    top: 3px;
+
     font-size: 3em;
-    color: #2F2F2F;
+    color: $dark-gray;
 
     transition: all .4s ease;
 
     &:hover {
-      top: -3px;
+      top:0;
       color: darkorange !important;
 
       transition: all .4s ease;
@@ -69,7 +71,7 @@
   width: 30vw;
   min-width: 200px;
 
-  background: #2F2F2F;
+  background: $dark-gray;
 
   display: flex;
   flex-direction: column;
@@ -78,7 +80,7 @@
 
   .circle {
     background: darkorange;
-    border: 3px solid #FAFAFA;
+    border: 3px solid $light-gray;
     border-radius: 50%;
     letter-spacing: 2px;
   }
@@ -87,9 +89,9 @@
     background: orange;
     width: 20vh;
     height: 20vh;
-    border: 5px solid #FAFAFA;
+    border: 5px solid $light-gray;
     font-size: 1.5em;
-    text-shadow: -2px 0px 0px #FAFAFA;
+    text-shadow: -2px 0px 0px $light-gray;
 
     -webkit-animation: pulsate-fwd 1.5s ease-in-out infinite both;
             animation: pulsate-fwd 1.5s ease-in-out infinite both;

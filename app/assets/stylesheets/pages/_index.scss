@@ -7,7 +7,7 @@
   width: 100vw;
   height: 70vh;
 
-  background: #FAFAFA;
+  background: $light-gray;
 
   #content {
     width: 80vw;
@@ -52,25 +52,25 @@
         text-align: center;
 
         &::-webkit-input-placeholder {
-          color: #2F2F2F;
+          color: $dark-gray;
           letter-spacing: 2px;
           text-align: center;
           opacity: .7;
         }
         &::-moz-placeholder { /* Firefox 18- */
-          color: #2F2F2F;
+          color: $dark-gray;
           letter-spacing: 2px;
           text-align: center;
           opacity: .7;
         }
         &::-moz-placeholder {  /* Firefox 19+ */
-          color: #2F2F2F;
+          color: $dark-gray;
           letter-spacing: 2px;
           text-align: center;
           opacity: .7;
         }
         &::-ms-input-placeholder {
-          color: #2F2F2F;
+          color: $dark-gray;
           letter-spacing: 2px;
           text-align: center;
           opacity: .7;
@@ -98,7 +98,7 @@
   width: 100vw;
   height: 30vh;
 
-  background: #2F2F2F;
+  background: $dark-gray;
 }
 
 
