@@ -19,13 +19,25 @@
     justify-content: space-around;
 
     #title {
+      width: 70vw;
 
+      padding-bottom: 1vh;
+      border-bottom: 1px solid;
+
+      letter-spacing: 2vw;
+    }
+
+    #subtitle {
+      margin-top: 2vh;
+      letter-spacing: 2vw;
+
+      opacity: .6;
     }
 
     #my-form {
 
-      height: 30vh;
       width: 50vw;
+      height: 30vh;
 
       display: flex;
       flex-direction: column;
@@ -34,8 +46,10 @@
 
 
       #username {
-        padding: 2vh 4vw;
         width: 100%;
+        padding: 2vh 4vw;
+
+        text-align: center;
 
         &::-webkit-input-placeholder {
           color: #2F2F2F;

@@ -1,6 +1,28 @@
-<h1>SHOW PAGE</h1>
-<%= link_to "< back", :back  %>
-<br><br>
-<p><%= image_tag @avatar %></p>
-<p><%= link_to "GitHub", @url, target: "_blank" %></p>
-<p><%= @top_lang %></p>
+<div class="wrapper d-flex" style="position:relative;">
+
+  <div id="white-left">
+
+    <%= link_to "New Search", root_path, id: "root-btn", class: "btn btn-large btn-outline-secondary my-pad"  %>
+
+    <h2 id="username" class="text-center">
+      <%= @username %>
+    </h2>
+
+    <%= image_tag @avatar, class: "github-avatar roll-in-left" %>
+
+    <p>
+      <%= link_to "<i class='fab fa-github'></i>".html_safe, @url, target: "_blank", id: "github-link" %>
+    </p>
+
+  </div>
+
+  <div id="dark-right">
+    <% @top_lang.each do |k,_| %>
+      <div class="circle flex-center bounce-top">
+        <%= k %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
+
