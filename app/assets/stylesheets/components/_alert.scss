@@ -1,6 +1,45 @@
-.alert {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
+// .alert {
+//   position: fixed;
+//   bottom: 16px;
+//   right: 16px;
+// }
+
+.flash {
+  position: absolute;
+  right: 0;
   z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 24px;
+  margin: 8px;
+
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+
+  letter-spacing: 2px;
 }
+
+.flash-success {
+  border: 2px solid #1EDD88;
+}
+
+.flash-warning {
+  border: 2px solid #FFC65A;
+}
+
+.flash-danger {
+  border: 2px solid #FD1015;
+}
+
+// MOBILE
+@media (max-width: 768px) {
+
+  .flash {
+    letter-spacing: 0;
+  }
+
+} // @media

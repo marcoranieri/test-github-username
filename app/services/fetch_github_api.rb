@@ -34,7 +34,6 @@ class FetchGithubApi
 end
 
 # arthur = FetchGithubApi.new("   ar th ur-li ttm    ")
-
 # p arthur.fetch_top_n_repos_languages
 # {"Ruby"=>18, "PHP"=>1, "JavaScript"=>1, "HTML"=>4, "CSS"=>1}
 
